@@ -1,6 +1,5 @@
 
-'use strict';
-
+'use strict'
 const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -38,9 +37,10 @@ const titleClickHandler = function(event){
     targetArticle.classList.add('active');
 
 }
-    const links = document.querySelectorAll('.titles a');
 
-    for (let link of links) {
+  const links = document.querySelectorAll('.titles a');
+
+  for (let link of links) {
     link.addEventListener('click', titleClickHandler);
     }
 
