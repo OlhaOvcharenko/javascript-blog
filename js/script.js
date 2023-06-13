@@ -1,5 +1,4 @@
 {
-  'use strict'
   const titleClickHandler = function(event){
     event.preventDefault();
     const clickedElement = this;
@@ -37,8 +36,8 @@
       
     /*[DONE] add class 'active' to the correct article */
     targetArticle.classList.add('active');
-
-  }
+  
+  };
 
   const optArticleSelector = '.post';
   const optTitleSelector = '.post-title';
