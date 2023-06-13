@@ -189,26 +189,27 @@
     /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
 
-    /* find wrapper for author */
-    const authorList = article.querySelector(optArticleAuthorSelector);
-    console.log(authorList)
+    for (let article of articles) {
+      /* find wrapper for author */
+      const authorList = article.querySelector(optArticleAuthorSelector);
+      console.log(authorList);
 
-    /* make html variable with empty string */
-    let html ='';
+      /* make html variable with empty string */
+      let html ='';
 
-    /* get author from data-author attribute */
-    const articleAuthor = article.getAttribute('data-author');
-    console.log(articleAuthor);
+      /* get author from data-author attribute */
+      const articleAuthor = article.getAttribute('data-author');
+      console.log(articleAuthor);
       
-    /* generate HTML of the link */
-    const linkHTML = '<li><a href="#' + articleAuthor + '"><i>' + articleAuthor+ '</i></a></li>';
+      /* generate HTML of the link */
+      const linkHTML = '<li><a href="#' + articleAuthor + '"><b>' + articleAuthor+ '</b></a></li>';
 
-    /* add generated code to html variable */
-    html += linkHTML;
+      /* add generated code to html variable */
+      html += linkHTML;
       
-    /* insert HTML of all the links into the tags wrapper */
-    authorList.innerHTML = html;
-
+      /* insert HTML of all the links into the tags wrapper */
+      authorList.innerHTML = html;
+    }
   }
 
   generateAuthors();
