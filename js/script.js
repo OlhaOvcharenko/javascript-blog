@@ -116,12 +116,16 @@
       /* START LOOP: for each tag */
       for(let tag of articleTagsArray){
         console.log(tag);
+
         /* generate HTML of the link */
         const linkHTML = '<li><a href="#tag-' + tag + '"><i>' + tag + '</i></a></li>';
 
         /* add generated code to html variable */
         html += linkHTML;
+
+      /* END LOOP: for each tag */
       }
+
       /* insert HTML of all the links into the tags wrapper */
       tagsList.innerHTML = html;
     }
@@ -168,6 +172,8 @@
     /* execute function "generateTitleLinks" with article selector as argument */
     generateTitleLinks('[data-tags~="' + tag + '"]');
   }
+
+
   
   function addClickListenersToTags() {
     /* find all links to tags */
