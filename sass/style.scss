@@ -82,6 +82,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
   .active {
     font-weight: bold;
   }
@@ -144,3 +145,39 @@ body {
   }
 }
 
+.tag-size-1 {
+  font-size: 40%;
+  color: brown;
+}
+
+.tag-size-2 {
+  font-size: 40%;
+  color: gold;
+}
+
+.tag-size-3 {
+  font-size: 40%;
+  color: rgb(127, 68, 68);
+}
+
+.tag-size-4 {
+  font-size: 80%;
+  color: orange;
+}
+
+.tag-size-5 {
+  font-size: 80%;
+  color: darkolivegreen;
+}
+
+.tag-size-6 {
+  font-size: 80%;
+  color: darkkhaki;
+  font-style: bold;
+}
+
+.tags.list li {
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 36px;
+}
