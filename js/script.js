@@ -257,9 +257,12 @@
 
 
   const optArticleAuthorSelector = '.post-author';
-  const optAuthorsListSelector = 'author.list.';
+  const optAuthorsListSelector = '.authors.list';
 
   const generateAuthors = function(){
+    /* [NEW] create a new variable allAuthors with an empty object */
+    let allAuthors = {};
+
     /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
 
@@ -280,10 +283,31 @@
 
       /* add generated code to html variable */
       html += linkHTML;
-      
+
+      /* [NEW] check if this link is NOT already in allAuthors */
+      if(!allAuthors[articleAuthor]){
+        /* [NEW] add author to allAuthors obect */
+        allAuthors[articleAuthor] = 1;
+      } else {
+        allAuthors[articleAuthor]++;
+      } 
       /* insert HTML of all the links into the tags wrapper */
       authorList.innerHTML = html;
     }
+
+    /* [NEW] find list of authors in right column */
+    const authorListColumn = document.querySelector(optAuthorsListSelector);
+
+    let allAuthorsHTML = '';
+
+    /* [NEW] START LOOP: for each articleAuthor in allAuthors: */
+    for(let articleAuthor in allAuthors){
+      allAuthorsHTML += '<li><a href="#author-' + articleAuthor + '"><b>' + articleAuthor+ '</b></a></li>';
+
+    /*[NEW] add HTML from allAuthorsHTML to authorList */
+    authorListColumn.innerHTML = allAuthorsHTML;
+    }
+
   };
 
   generateAuthors();
