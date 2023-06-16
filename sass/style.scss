@@ -35,6 +35,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+  text-align: center;
   span {
     text-transform: none;
     font-weight: 400;
@@ -46,7 +47,7 @@ body {
 
 .wrapper {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .sidebar {
@@ -136,6 +137,7 @@ body {
 .post-author {
   font-style: italic;
   font-weight: 200;
+  margin: 0;
 }
 
 .post-tags {
@@ -146,35 +148,29 @@ body {
 }
 
 .tag-size-1 {
-  font-size: 40%;
+  font-size: 50%;
   color: brown;
+  font-weight: 600;
 }
 
 .tag-size-2 {
-  font-size: 40%;
-  color: gold;
+  font-size: 50%;
+  color: orangered;
+  font-weight: 600;
 }
 
 .tag-size-3 {
-  font-size: 40%;
+  font-size: 50%;
   color: rgb(127, 68, 68);
+  font-weight: 600;
 }
 
 .tag-size-4 {
   font-size: 80%;
   color: orange;
+  font-weight: 600;
 }
 
-.tag-size-5 {
-  font-size: 80%;
-  color: darkolivegreen;
-}
-
-.tag-size-6 {
-  font-size: 80%;
-  color: darkkhaki;
-  font-style: bold;
-}
 
 .tags.list li {
   display: inline-block;
