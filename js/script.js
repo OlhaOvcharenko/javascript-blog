@@ -237,7 +237,7 @@
     /* execute function "generateTitleLinks" with article selector as argument */
     generateTitleLinks('[data-tags~="' + tag + '"]');
 
-  };
+  }
   
   function addClickListenersToTags() {
     /* find all links to tags */
@@ -272,7 +272,7 @@
       /* generate HTML of the link */
       const linkHTML = '<li><a href="#author-' + articleAuthor + '"><b>' + articleAuthor+ '</b></a></li>';
 
-     /* insert HTML of all the links into the tags wrapper */
+      /* insert HTML of all the links into the author wrapper */
       authorList.innerHTML = linkHTML;
 
       /* [NEW] check if this link is NOT already in allAuthors */
@@ -351,7 +351,4 @@
   }
 
   addClickListenersToAuthor();
-
-
-
 }
