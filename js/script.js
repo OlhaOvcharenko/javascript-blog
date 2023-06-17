@@ -7,7 +7,7 @@
     authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
     tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
     authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML),
-  }
+  };
 
   const opts = {
     articleSelector: '.post',
@@ -214,7 +214,7 @@
     /*[NEW] add HTML from allTagsHTML to tagList */
     /*tagList.innerHTML = allTagsHTML;*/
     tagList.innerHTML = templates.tagCloudLink(allTagsData);
-    console.log(allTagsData)
+    console.log(allTagsData);
     
   }
   
